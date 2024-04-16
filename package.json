@@ -13,7 +13,7 @@
     "lint:test": "npm run lint && npm test",
     "test": "mocha \"tests/**/*.tests.js\"",
     "test:report": "mocha \"tests/**/*.tests.js\" --reporter mocha-junit-reporter",
-    "test:coverage": "NODE_ENV=test c8 --all --include=lib/* --reporter=html --reporter=text --reporter=lcov mocha \"tests/**/*.tests.js\" --reporter mocha-junit-reporter",
+    "test:coverage": "c8 --all --include=lib/* --reporter=html --reporter=text --reporter=lcov mocha \"tests/**/*.tests.js\" --reporter mocha-junit-reporter",
     "test:watch": "npm test -- --watch",
     "docs": "jsdoc --readme README.md ./lib/*.js -d ./docs && jsdoc2md ./lib/*.js > ./api.md",
     "prepack": "npm run build:full",
